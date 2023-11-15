@@ -4,9 +4,13 @@ import Image from "next/image"
 import IconButton from "@/components/ui/iconButton"
 import { Expand, ShoppingCart } from "lucide-react"
 import Currency from "@/components/ui/currency"
+import { useRouter } from "next/navigation"
 
 export default function ProductCard(props: ProductCardProps) {
   const { data } = props
+  const { push } = useRouter()
+
+  const handleExpandClick = () => push(`/product/${data?.id}`)
 
   return (
     <div className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
@@ -20,7 +24,7 @@ export default function ProductCard(props: ProductCardProps) {
         <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
           <div className="flex gap-x-6 justify-center">
             <IconButton
-              onClick={() => {}}
+              onClick={handleExpandClick}
               icon={<Expand size={20} className="text-gray-600" />}
               className=""
             />

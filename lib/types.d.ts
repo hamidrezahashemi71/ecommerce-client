@@ -44,6 +44,20 @@ interface CurrencyProps {
   value?: string | number
 }
 
+interface ProductPageProps {
+  params: {
+    productId: string
+  }
+}
+
+interface GalleryProps {
+  images: Image[]
+}
+
+interface GalleryTabProps {
+  image: Image
+}
+
 interface Image {
   id: string
   url: string
