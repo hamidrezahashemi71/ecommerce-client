@@ -3,6 +3,7 @@ import { sahel } from '@/lib/fonts'
 import './globals.css'
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
+import ModalProvider from '@/providers/modalProvider'
 
 export const metadata: Metadata = {
   title: 'فروشگاه',
@@ -15,6 +16,7 @@ export default function RootLayout(props: LayoutProp) {
   return (
     <html lang="fa" dir='rtl'>
       <body className={`${sahel.variable} font-sahel`}>
+        <ModalProvider />
         <Navbar />
         {children}
         <Footer />

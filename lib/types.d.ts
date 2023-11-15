@@ -99,3 +99,16 @@ interface MobileFilterProps {
   sizes: Size[]
   colors: Color[]
 }
+
+interface PreviewModalStore {
+  isOpen: boolean
+  data?: Product
+  onOpen: (data: Product) => void
+  onClose: () => void
+}
+
+interface ModalProps {
+  open: boolean
+  onClose: () => void
+  children: React.ReactNode
+}
