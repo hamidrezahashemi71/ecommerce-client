@@ -79,3 +79,18 @@ interface Color {
   value: string
 }
 
+interface CategoryPageProps {
+  params: {
+    categoryId: string
+  },
+  searchParams: {
+    colorId: string
+    sizeId: string
+  }
+}
+
+interface FilterProps {
+  data: (Size | Color)[]
+  name: string
+  valueKey: string
+}
