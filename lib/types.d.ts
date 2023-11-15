@@ -94,3 +94,8 @@ interface FilterProps {
   name: string
   valueKey: string
 }
+
+interface MobileFilterProps {
+  sizes: Size[]
+  colors: Color[]
+}

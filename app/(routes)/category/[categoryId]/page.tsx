@@ -4,9 +4,10 @@ import getProducts from "@/actions/getProducts"
 import getSizes from "@/actions/getSizes"
 import Billboard from "@/components/billboard"
 import Container from "@/components/ui/container"
-import Filter from "./components/Filter"
+import Filter from "./components/filter"
 import NoResults from "@/components/ui/noResults"
 import ProductCard from "@/components/ui/productCard"
+import MobileFilters from "./mobileFilters"
 
 export default async function Category(props: CategoryPageProps) {
   const { params, searchParams } = props
@@ -29,7 +30,10 @@ export default async function Category(props: CategoryPageProps) {
         />
         <div className="px-4 sm:px-6 lg:px-8 pb-24">
           <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
-            {/* TODO: add mobile filters */}
+            <MobileFilters
+              sizes={sizes}
+              colors={colors}
+            />
             <div className="hidden lg:block">
               <Filter
                 valueKey='sizeId'
