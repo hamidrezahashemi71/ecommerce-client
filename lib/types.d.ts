@@ -58,6 +58,10 @@ interface GalleryTabProps {
   image: Image
 }
 
+interface InfoProps {
+  data: Product
+}
+
 interface Image {
   id: string
   url: string
