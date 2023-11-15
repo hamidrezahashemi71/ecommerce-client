@@ -4,7 +4,7 @@ interface LayoutProp {
 
 interface Billboard  {
   id: string
-  name: string
+  label: string
   imageUrl: string
 }
 
@@ -15,3 +15,7 @@ interface Category {
 }
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+
+interface BillboardProps {
+  data: Billboard
+}
