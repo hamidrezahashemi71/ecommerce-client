@@ -14,3 +14,4 @@ interface Category {
   billboard: Billboard
 }
 
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
