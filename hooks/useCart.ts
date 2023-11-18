@@ -1,4 +1,4 @@
-import toast from "react-hot-toast/headless"
+import { toast } from "react-hot-toast"
 import { create } from "zustand"
 import { persist, createJSONStorage } from "zustand/middleware"
 
@@ -11,7 +11,7 @@ const useCart = create(
       const existingItem = currentItems.find((item) => item.id === data.id)
 
       if(existingItem) {
-        return toast('این آیتم در سبد خرید وجود دارد.')
+        return toast.error('این آیتم از قبل در سبد خرید وجود دارد.')
       }
 
       set({ items: [...get().items, data]})
