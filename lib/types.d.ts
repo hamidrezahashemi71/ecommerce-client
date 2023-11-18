@@ -107,6 +107,13 @@ interface PreviewModalStore {
   onClose: () => void
 }
 
+interface CartStore {
+  items: Product[]
+  addItem: (data: Product) => void
+  removeItem: (id: string) => void
+  removeAll: () => void
+}
+
 interface ModalProps {
   open: boolean
   onClose: () => void

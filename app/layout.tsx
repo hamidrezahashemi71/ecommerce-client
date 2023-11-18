@@ -4,6 +4,7 @@ import './globals.css'
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
 import ModalProvider from '@/providers/modalProvider'
+import ToastProvider from '@/providers/toastProvider'
 
 export const metadata: Metadata = {
   title: 'فروشگاه',
@@ -17,6 +18,7 @@ export default function RootLayout(props: LayoutProp) {
     <html lang="fa" dir='rtl'>
       <body className={`${sahel.variable} font-sahel`}>
         <ModalProvider />
+        <ToastProvider />
         <Navbar />
         {children}
         <Footer />
