@@ -119,3 +119,7 @@ interface ModalProps {
   onClose: () => void
   children: React.ReactNode
 }
+
+interface CartItemProps {
+  data: Product
+}
