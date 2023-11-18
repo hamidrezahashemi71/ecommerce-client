@@ -5,6 +5,7 @@ import NoResults from "@/components/ui/noResults"
 import useCart from "@/hooks/useCart"
 import { useEffect, useState } from "react"
 import CartItem from "./components/cartItem"
+import Summary from "./components/summary"
 
 export default function Cart() {
   const [isMounted, setIsMounted] = useState(false)
@@ -35,6 +36,7 @@ export default function Cart() {
                 ))}
               </ul>
             </div>
+            {cart.items.length && <Summary />}
           </div>
         </div>
       </Container>
